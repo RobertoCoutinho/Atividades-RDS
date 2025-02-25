@@ -30,7 +30,7 @@ namespace Modules.RateLimiterMiddleware
 
                 if (now > entry.ResetTime)
                 {
-                    _requests[ip] = (1, now.AddSeconds(ResetTimeInSeconds)); // Resetando o contador
+                    _requests[ip] = (1, now.AddSeconds(ResetTimeInSeconds));
                 }
                 else
                 {
